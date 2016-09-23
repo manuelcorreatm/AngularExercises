@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+
+<html ng-app="angularExercises" >
+<head>
+    <meta charset="utf-8" />
+    <title>Angular Exercises</title>
+    <link href="stylesheets/handsontable.full.css" rel="stylesheet" />
+    <link href="stylesheets/bootstrap.css" rel="stylesheet" />
+    <link href="stylesheets/style.css" rel="stylesheet" />
+    <base href="/">
+</head>
+<body>
+    <nav class="nav navbar-static-top" ng-controller="navCtrl">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="glyphicon glyphicon-option-vertical"></span>
+                </button>
+                <a class="navbar-brand" href="" ng-click="showHome()">Angular</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                <ul class="nav nav-tabs nav-justified">
+                    <li role="presentation" class="active"><a href="" ng-click="showHome()">Home</a></li>
+                    <li role="presentation"><a href="" ng-click="showGraph()">Graph</a></li>
+                    <li role="presentation"><a href="" ng-click="showSheet()">Spreadsheet</a></li>
+                    <li role="presentation"><a href="" ng-click="showGallery()">Gallery</a></li>
+                    <li role="presentation"><a href="" ng-click="showForms()">Forms</a></li>
+                    <li role="presentation"><a href="" ng-click="showSpoilers()">Spoilers</a></li>
+                    <li role="presentation"><a href="" ng-click="showNotes()">Notes</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+
+    <div class="panel panel-primary" ng-controller="mainCtrl">
+        <div ng-view></div>
+    </div>
+
+    <!--Vendor JS-->
+    <script src="javascripts/vendor/jquery-3.1.0.min.js"></script>
+    <script src="javascripts/vendor/bootstrap.js"></script>
+    <script src="javascripts/vendor/angular.js"></script>
+    <script src="javascripts/vendor/angular-route.js"></script>
+    <script src="javascripts/vendor/angular-resource.js"></script>
+    <script src="javascripts/vendor/angular-touch.js"></script>
+    <script src="javascripts/vendor/angular-animate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.2/Chart.js"></script>
+    <script src="javascripts/vendor/handsontable.full.js"></script>
+
+    <!--My JS-->
+    <script src="javascripts/modules/mainModule.js"></script>
+    <script src="javascripts/controllers/mainCtrl.js"></script>
+    <script src="javascripts/controllers/navCtrl.js"></script>
+    <script src="javascripts/controllers/graphCtrl.js"></script>
+    <script src="javascripts/controllers/sheetCtrl.js"></script>
+    <script src="javascripts/controllers/galleryCtrl.js"></script>
+    <script src="javascripts/controllers/formsCtrl.js"></script>
+    <script src="javascripts/controllers/spoilersCtrl.js"></script>
+    <script src="javascripts/controllers/notesCtrl.js"></script>
+    <script src="javascripts/directives/graphDirective.js"></script>
+    <script src="javascripts/directives/sheetDirective.js"></script>
+    <script src="javascripts/directives/galleryDirective.js"></script>
+    <script src="javascripts/directives/multipleCoincideDirective.js"></script>
+    <script src="javascripts/services/pubsub.js"></script>
+</body>
+</html>

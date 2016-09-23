@@ -1,0 +1,20 @@
+.scrollable {
+    overflow-y: scroll;
+}
+
+.gallery {
+    height: 300px;
+}
+
+.center-div {
+    margin: auto;
+    width: 400px;
+}
+
+input.ng-valid-multiple-coincide {
+    background-color: greenyellow;
+}
+
+input.ng-invalid-multiple-coincide {
+    background-color: lightpink;
+}

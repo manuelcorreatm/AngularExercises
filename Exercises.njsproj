@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>Exercises</Name>
+    <RootNamespace>Exercises</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>2f60f99b-4352-4230-9c03-804d4c443d13</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>server.js</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <ProjectView>ShowAllFiles</ProjectView>
+    <NodejsPort>1337</NodejsPort>
+    <StartWebBrowser>True</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="app.js" />
+    <Compile Include="public\javascripts\controllers\graphCtrl.js" />
+    <Compile Include="public\javascripts\controllers\notesCtrl.js" />
+    <Compile Include="public\javascripts\controllers\formsCtrl.js" />
+    <Compile Include="public\javascripts\controllers\spoilersCtrl.js" />
+    <Compile Include="public\javascripts\controllers\galleryCtrl.js" />
+    <Compile Include="public\javascripts\controllers\mainCtrl.js" />
+    <Compile Include="public\javascripts\controllers\navCtrl.js" />
+    <Compile Include="public\javascripts\controllers\sheetCtrl.js" />
+    <Compile Include="public\javascripts\directives\galleryDirective.js" />
+    <Compile Include="public\javascripts\directives\graphDirective.js" />
+    <Compile Include="public\javascripts\directives\sheetDirective.js" />
+    <Compile Include="public\javascripts\directives\multipleCoincideDirective.js" />
+    <Compile Include="public\javascripts\modules\mainModule.js" />
+    <Compile Include="public\javascripts\services\pubsub.js" />
+    <Compile Include="public\javascripts\vendor\angular-animate.js" />
+    <Compile Include="public\javascripts\vendor\angular-resource.js" />
+    <Compile Include="public\javascripts\vendor\angular-route.js" />
+    <Compile Include="public\javascripts\vendor\angular-touch.js" />
+    <Compile Include="public\javascripts\vendor\angular.js" />
+    <Compile Include="public\javascripts\vendor\bootstrap.js" />
+    <Compile Include="public\javascripts\vendor\handsontable.full.js" />
+    <Compile Include="public\javascripts\vendor\jquery-3.1.0.min.js" />
+    <Compile Include="routes\index.js" />
+    <Compile Include="routes\users.js" />
+    <Compile Include="server.js" />
+    <Content Include="bin\www" />
+    <Content Include="package.json" />
+    <Content Include="public\favicon.ico" />
+    <Content Include="public\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="public\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="public\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="public\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="public\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="public\galleryDirectiveTemplate.html" />
+    <Content Include="public\graph.html" />
+    <Content Include="public\home.html" />
+    <Content Include="public\images\chicken-leg-icon-114-191296.png" />
+    <Content Include="public\images\chicken-leg-icon-120-191296.png" />
+    <Content Include="public\images\chicken-leg-icon-144-191296.png" />
+    <Content Include="public\images\chicken-leg-icon-152-191296.png" />
+    <Content Include="public\images\chicken-leg-icon-16-191296.png" />
+    <Content Include="public\images\chicken-leg-icon-24-191296.png" />
+    <Content Include="public\images\chicken-leg-icon-32-191296.png" />
+    <Content Include="public\images\chicken-leg-icon-48-191296.png" />
+    <Content Include="public\images\chicken-leg-icon-57-191296.png" />
+    <Content Include="public\images\chicken-leg-icon-64-191296.png" />
+    <Content Include="public\images\chicken-leg-icon-72-191296.png" />
+    <Content Include="public\images\favicon.ico" />
+    <Content Include="public\index.html" />
+    <Content Include="public\gallery.html" />
+    <Content Include="public\notes.html" />
+    <Content Include="public\forms.html" />
+    <Content Include="public\spoilers.html" />
+    <Content Include="public\sheet.html" />
+    <Content Include="public\stylesheets\bootstrap.css" />
+    <Content Include="public\stylesheets\handsontable.full.css" />
+    <Content Include="public\stylesheets\style.css" />
+    <Content Include="README.md" />
+    <Content Include="views\index.pug" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\" />
+    <Folder Include="public\" />
+    <Folder Include="public\fonts\" />
+    <Folder Include="public\images\" />
+    <Folder Include="public\javascripts\" />
+    <Folder Include="public\javascripts\controllers\" />
+    <Folder Include="public\javascripts\modules\" />
+    <Folder Include="public\javascripts\directives\" />
+    <Folder Include="public\javascripts\services\" />
+    <Folder Include="public\javascripts\vendor\" />
+    <Folder Include="public\stylesheets\" />
+    <Folder Include="routes\" />
+    <Folder Include="views\" />
+  </ItemGroup>
+  <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

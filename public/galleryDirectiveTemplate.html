@@ -1,0 +1,39 @@
+﻿<div class='panel'>
+    <div class='panel-heading'>
+        <div class='input-group'>
+            <input ng-model='query' class='form-control' />
+            <span class='input-group-btn'>
+                <button ng-click='searchImages()' class='btn btn-default'>Search</button>
+            </span>
+        </div>
+    </div>
+    <div id='gallerySearchResults' class='panel-body well scrollable gallery'>
+        <div class='row' ng-repeat='item in items' ng-if="$index % 5 == 0">
+            <div class='col-xs-6 col-md-2' >
+                <a href='{{items[$index].link}}' class='thumbnail'>
+                    <img src='{{items[$index].image.thumbnailLink}}' />
+                </a>
+            </div>
+            <div class='col-xs-6 col-md-2' >
+                <a href='{{items[$index+1].link}}' class='thumbnail'>
+                    <img src='{{items[$index+1].image.thumbnailLink}}' />
+                </a>
+            </div>
+            <div class='col-xs-6 col-md-2' >
+                <a href='{{items[$index+2].link}}' class='thumbnail'>
+                    <img src='{{items[$index+2].image.thumbnailLink}}' />
+                </a>
+            </div>
+            <div class='col-xs-6 col-md-2' >
+                <a href='{{items[$index+3].link}}' class='thumbnail'>
+                    <img src='{{items[$index+3].image.thumbnailLink}}' />
+                </a>
+            </div>
+            <div class='col-xs-6 col-md-2' >
+                <a href='{{items[$index+4].link}}' class='thumbnail'>
+                    <img src='{{items[$index+4].image.thumbnailLink}}' />
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
