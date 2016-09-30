@@ -1,61 +1,78 @@
 ﻿<h3 class="panel-heading">Forms</h3>
 <div class="panel-body" ng-controller="formsCtrl">
     <div>
-        <form method="post" id="form1" name="form1" novalidate>
+        <form name="form0" multi-step novalidate ng-submit="submit()">
+            <ng-form name="form1" novalidate ng-submit="submit()">
+                <div class="center-div well">
+                    <div class="form-group row">
+                        <label for="inputEmail1" class="col-sm-2 col-form-label">Email</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="email1" class="form-control" id="inputEmail1" placeholder="Email" multiple-coincide="multi1" ng-model="email1" />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputEmail2" class="col-sm-2 col-form-label">Email</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="email2" class="form-control" id="inputEmail2" placeholder="Email" multiple-coincide="multi1" ng-model="email2" />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="email3" class="form-control" id="inputEmail3" placeholder="Email" multiple-coincide="multi1" ng-model="email3" />
+                        </div>
+                    </div>
+                    <error-message type="multiple-coincide" for="email1" defer="true">Not the same</error-message>
+                    <div class="form-group row">
+                        <button class="btn btn-primary" ng-click="nextStep()">Next</button>
+                    </div>
+                </div>
+            </ng-form>
             
-            <div class="center-div well">
-                <div class="form-group row">
-                    <label for="inputEmail1" class="col-sm-2 col-form-label">Email</label>
-                    <div class="col-sm-10">
-                        <input type="text" name="email1" class="form-control" id="inputEmail1" placeholder="Email" multiple-coincide="multi1" ng-model="email1"/>
+            <ng-form name="form2" novalidate>
+                <div class="center-div well" step="2">
+                    <div class="form-group row">
+                        <label for="date" class="col-sm-2 col-form-label">Date</label>
+                        <div class="col-sm-10">
+                            <input type="date" id="date" name="date" ng-model="date" class="form-control" range range-min="2016-09-10" range-max="2016-09-15" />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="num" class="col-sm-2 col-form-label">Number</label>
+                        <div class="col-sm-10">
+                            <input type="number" id="num" name="num" ng-model="num" class="form-control" range range-min="22" range-max="45" />
+                        </div>
+                    </div>
+                    <error-message type="range-min" for="num">Not in range</error-message>
+                    <div class="form-group row">
+                        <button class="btn btn-primary" ng-click="previousStep()">Previous</button>
+                        <button class="btn btn-primary" ng-click="nextStep()">Next</button>
                     </div>
                 </div>
-                <div class="form-group row">
-                    <label for="inputEmail2" class="col-sm-2 col-form-label" >Email</label>
-                    <div class="col-sm-10">
-                        <input type="text" name="email2" class="form-control" id="inputEmail2" placeholder="Email" multiple-coincide="multi1" ng-model="email2"/>
+            </ng-form>
+            
+            <ng-form name="form3" novalidate>
+                <div class="center-div well" step="3">
+                    <div class="form-group row">
+                        <label for="alpha5" class="col-sm-2 col-form-label">Alphabetic</label>
+                        <div class="col-sm-10">
+                            <input type="text" id="alpha5" name="alpha5" class="form-control" ng-model="alpha" datatype="alphabetic" />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="numeric" class="col-sm-2 col-form-label">Numeric</label>
+                        <div class="col-sm-10">
+                            <input type="number" id="numeric" name="numeric" class="form-control" ng-model="numeric" datatype="numeric" />
+                        </div>
+                    </div>
+                    <error-message type="datatype" for="numeric">Not a number</error-message>
+                    <div class="form-group row">
+                        <button class="btn btn-primary" ng-click="previousStep()">Previous</button>
+                        <input type="submit" name="name" value="Submit" class="btn btn-primary" />
                     </div>
                 </div>
-                <div class="form-group row">
-                    <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
-                    <div class="col-sm-10">
-                        <input type="text" name="email3" class="form-control" id="inputEmail3" placeholder="Email" multiple-coincide="multi1" ng-model="email3"/>
-                    </div>
-                </div>
-            </div>
-
-            <div class="center-div well">
-                <div class="form-group row">
-                    <label for="inputEmail4" class="col-sm-2 col-form-label">Email</label>
-                    <div class="col-sm-10">
-                        <input type="text" name="email1" class="form-control" id="inputEmail4" placeholder="Email" multiple-coincide="multi2" ng-model="email4" />
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="inputEmail5" class="col-sm-2 col-form-label">Email</label>
-                    <div class="col-sm-10">
-                        <input type="text" name="email2" class="form-control" id="inputEmail5" placeholder="Email" multiple-coincide="multi2" ng-model="email5" />
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="inputEmail6" class="col-sm-2 col-form-label">Email</label>
-                    <div class="col-sm-10">
-                        <input type="text" name="email3" class="form-control" id="inputEmail6" placeholder="Email" multiple-coincide="multi2" ng-model="email6" />
-                    </div>
-                </div>
-            </div>
-
-            <div class="center-div well">
-                <input type="date" name="name" value="" class="form-control" />
-                <input type="number" name="name" value="" class="form-control"/>
-            </div>
-            <div class="center-div well">
-                <input type="text" name="name" value="" class="form-control" />
-                <input type="text" name="name" value="" class="form-control" />
-            </div>
-            <div class="center-div well">
-                <input type="submit" name="name" value="Submit" class="btn btn-default" />
-            </div>
+            </ng-form>
+                    
         </form>
     </div>
 </div>

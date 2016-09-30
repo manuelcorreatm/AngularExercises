@@ -1,4 +1,36 @@
 ﻿<h3 class="panel-heading">Notes</h3>
-<div class="panel-body" ng-controller="notesCtrl">
-    <div>Notes</div>
+<div id="container" class="panel-body" ng-controller="notesCtrl">
+    <div id="editor" class="">
+        <form id="form" novalidate>
+            <div class="form-group">
+                <label for="titleText">Title: </label>
+                <input id="titleTxt" type="text" ng-model="title" class="form-control"/>
+            </div>
+            <div class="form-group">
+                <label for="contentTxa">Content: </label>
+                <textarea id="contentTxa" ng-model="content" class="form-control"></textarea>
+            </div>
+            <div class="form-group">
+                <button id="clearBtn" type="button" ng-click="clear()" class="btn btn-default">Clear</button>
+                <input id="submitBtn" type="submit" value="Save" ng-click="saveNote()" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>  
+    <div id="notes">
+        <article ng-repeat="(id, note) in notes">
+            <h4>{{note.title}}</h4>
+            <p>{{note.content}}</p>
+            <footer>
+                <div>
+                    <label>Created: {{note.created | date}}</label>
+                    <label>Last modified: {{note.modified | date}}</label>
+                </div>
+                <button ng-click="editNote(id)" class="btn btn-warning">Edit</button>
+                <button ng-click="deleteNote(id)" class="btn btn-danger">Delete</button>
+            </footer>
+            
+        </article>
+
+    </div>
+
 </div>

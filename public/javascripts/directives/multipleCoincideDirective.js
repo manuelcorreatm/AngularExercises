@@ -30,7 +30,7 @@
 
                 //subscribe to event
                 pubsub.subscribe(eventName, function (topic, args) {
-                    ctrl.$setValidity("multiple-coincide", args.valid);
+                    ctrl.$setValidity("multipleCoincide", args.valid);
                 });
 
             },

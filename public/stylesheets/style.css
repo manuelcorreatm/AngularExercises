@@ -11,10 +11,10 @@
     width: 400px;
 }
 
-input.ng-valid-multiple-coincide {
+input.ng-valid-multiple-coincide, input.ng-valid-range-min, input.ng-valid-range-max, input.ng-valid-datatype {
     background-color: greenyellow;
 }
 
-input.ng-invalid-multiple-coincide {
+input.ng-invalid-multiple-coincide, input.ng-invalid-range-min, input.ng-invalid-range-max, input.ng-invalid-datatype {
     background-color: lightpink;
 }

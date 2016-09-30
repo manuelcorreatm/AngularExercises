@@ -39,10 +39,15 @@
     <Compile Include="public\javascripts\controllers\mainCtrl.js" />
     <Compile Include="public\javascripts\controllers\navCtrl.js" />
     <Compile Include="public\javascripts\controllers\sheetCtrl.js" />
+    <Compile Include="public\javascripts\directives\censorDirective.js" />
+    <Compile Include="public\javascripts\directives\errorMessagesDirective.js" />
     <Compile Include="public\javascripts\directives\galleryDirective.js" />
     <Compile Include="public\javascripts\directives\graphDirective.js" />
+    <Compile Include="public\javascripts\directives\multiStepFormDirective.js" />
+    <Compile Include="public\javascripts\directives\rangeDirective.js" />
     <Compile Include="public\javascripts\directives\sheetDirective.js" />
     <Compile Include="public\javascripts\directives\multipleCoincideDirective.js" />
+    <Compile Include="public\javascripts\directives\datatypeDirective.js" />
     <Compile Include="public\javascripts\modules\mainModule.js" />
     <Compile Include="public\javascripts\services\pubsub.js" />
     <Compile Include="public\javascripts\vendor\angular-animate.js" />
